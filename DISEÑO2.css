@@ -117,6 +117,51 @@ body {
     color: var(--rosa-fuerte);
 }
 
+
+.seccion-deslizable {
+    width: 100%;
+    height: 100vh; /* Cada sección mide el alto total del celular */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% auto;
+    background-position: center bottom;
+}
+
+/* AQUÍ PONES TUS 3 IMÁGENES DIFERENTES */
+.fondo-1 { background-image: url('fondo1.png'); }
+.fondo-2 { background-image: url('Fondo2.png'); }
+.fondo-3 { background-image: url('Fondo3.png'); }
+
+/* Ajuste para que el texto se vea pro (como el azul que te gustó) */
+.hero, .info-evento, .botones-interactivos {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanquito suave para leer mejor */
+    padding: 20px;
+    border-radius: 20px;
+    width: 85%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* BOTONES */
 .btn {
     display: block;
