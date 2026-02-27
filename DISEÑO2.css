@@ -1,0 +1,145 @@
+
+
+
+
+/* Variables de color para niña */
+:root {
+    --rosa-claro: #fdf2f5;
+    --rosa-medio: #f8bbd0;
+    --rosa-fuerte: #f06292;
+    --dorado: #c5a059;
+    --blanco: #ffffff;
+    --gris-texto: #5d4037;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--rosa-claro);
+    color: var(--gris-texto);
+    overflow: hidden; /* Bloqueamos scroll al inicio */
+}
+
+/* --- ESTILOS DEL SOBRE --- */
+#pantalla-sobre {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--rosa-claro);
+    background-size: cover;
+    background-position: center;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    flex-direction: column;
+    
+    /* FONDO: Asegúrate de que el archivo esté en la misma carpeta que este código */
+    background-image: url('fondo.png'); 
+    background-repeat: no-repeat;
+}
+
+.img-sobre {
+    width: 280px;
+    max-width: 80%;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+    cursor: pointer;
+    margin-top: 50px;
+    z-index: 101;
+    transition: transform 0.3s;
+}
+
+.flecha {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    animation: bounce 1.5s infinite;
+}
+
+.texto-abrir {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--dorado);
+}
+
+/* --- ESTILOS DE LA INVITACIÓN --- */
+#invitacion-principal {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--blanco);
+    position: relative;
+    top: 100vh; /* Escondida inicialmente */
+    transition: top 0.8s ease-out;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.hero {
+    padding: 50px 20px;
+    background: linear-gradient(var(--rosa-medio), var(--blanco));
+}
+
+.nombre-bebe {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--dorado);
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--blanco);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+.fecha-caja {
+    margin: 30px auto;
+    width: 80%;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.numero-dia {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--rosa-fuerte);
+}
+
+/* BOTONES */
+.btn {
+    display: block;
+    width: 85%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s;
+}
+
+.btn-dorado { background: var(--dorado); color: var(--blanco); }
+.btn-rosa { border: 2px solid var(--rosa-fuerte); color: var(--rosa-fuerte); }
+
+.btn:active { transform: scale(0.95); }
+
+/* CLASES DE ANIMACIÓN */
+.subir-sobre { transform: translateY(-100vh); }
+.mostrar-invitacion { top: 0 !important; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
